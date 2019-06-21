@@ -2,8 +2,8 @@
 //  ViewController.m
 //  SkyBoxImage
 //
-//  Created by 林伟池 on 16/4/27.
-//  Copyright © 2016年 林伟池. All rights reserved.
+//  Created by loyinglin on 16/4/27.
+//  Copyright © 2016年 loyinglin. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.mImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100 * 6)];
-    UIImage* image = [UIImage imageNamed:@"skybox"];
+    UIImage* image = [UIImage imageNamed:@"cubemaps_skybox"];
     [self.mImageView setImage:image];
     NSLog(@"%@", [image description]);
     [self.view addSubview:self.mImageView];

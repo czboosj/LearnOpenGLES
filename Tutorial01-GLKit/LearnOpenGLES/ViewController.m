@@ -2,8 +2,8 @@
 //  ViewController.m
 //  LearnOpenGLES
 //
-//  Created by 林伟池 on 16/3/11.
-//  Copyright © 2016年 林伟池. All rights reserved.
+//  Created by loyinglin on 2018年06月04日；
+//  Copyright © 2016年 loyinglin. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -34,8 +34,8 @@
 }
 
 - (void)uploadVertexArray {
-    //顶点数据，前三个是顶点坐标，后面两个是纹理坐标
-    GLfloat squareVertexData[] =
+    //顶点数据，前三个是顶点坐标（x、y、z轴），后面两个是纹理坐标（x，y）
+    GLfloat vertexData[] =
     {
         0.5, -0.5, 0.0f,    1.0f, 0.0f, //右下
         0.5, 0.5, -0.0f,    1.0f, 1.0f, //右上
@@ -50,7 +50,7 @@
     GLuint buffer;
     glGenBuffers(1, &buffer);
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(squareVertexData), squareVertexData, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW);
     
     glEnableVertexAttribArray(GLKVertexAttribPosition); //顶点数据缓存
     glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 0);
